@@ -1802,7 +1802,7 @@ footer {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--black-support) 100%);
     color: white;
     text-align: center;
-    padding: 2rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     margin-top: 4rem;
     border-top: 4px solid transparent;
     border-image: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 50%, var(--bg-gradient-end) 100%);
@@ -1828,7 +1828,6 @@ footer::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
     position: relative;
     z-index: 1;
 }
