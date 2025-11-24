@@ -42,8 +42,8 @@ urlpatterns = [
     path('register/', user_views.register_view, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
-    path('profile/<str:username>/', user_views.journalist_profile, name='user_profile'),
     path('profile/edit/', user_views.edit_profile, name='edit_profile'),
+    path('profile/<str:username>/', user_views.journalist_profile, name='user_profile'),
     
     path('admin-dashboard/', admin_views.admin_dashboard, name='admin_dashboard'),
     path('admin-dashboard/articles/pending/', admin_views.admin_articles_pending, name='admin_articles_pending'),

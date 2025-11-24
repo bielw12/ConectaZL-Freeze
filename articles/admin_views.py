@@ -11,7 +11,7 @@ from datetime import timedelta
 
 def admin_required(view_func):
     def wrapper(request, *args, **kwargs):
-        if not request.user.is_authenticated or request.user.profile.role != 'admin':
+        if not request.user.is_authenticated or (request.user.profile.role != 'admin' and not request.user.is_superuser):
             messages.error(request, 'Acesso negado. Apenas administradores podem acessar esta página.')
             return redirect('home')
         return view_func(request, *args, **kwargs)

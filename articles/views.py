@@ -256,6 +256,10 @@ def news_feed(request):
 
 def journalist_profile(request, username):
     from django.contrib.auth.models import User
+    
+    if request.user.is_authenticated and (request.user.profile.role == 'admin' or request.user.is_superuser):
+        return redirect('admin_dashboard')
+    
     journalist = get_object_or_404(User, username=username)
     
     user_articles = Article.objects.filter(

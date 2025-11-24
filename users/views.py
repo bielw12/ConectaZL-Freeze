@@ -55,6 +55,9 @@ def logout_view(request):
 
 
 def journalist_profile(request, username):
+    if request.user.is_authenticated and (request.user.profile.role == 'admin' or request.user.is_superuser):
+        return redirect('admin_dashboard')
+    
     user = get_object_or_404(User, username=username)
     articles = Article.objects.filter(author=user, published=True, approval_status='approved').order_by('-created_at')
     
