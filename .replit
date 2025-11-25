@@ -45,6 +45,11 @@ externalPort = 80
 localPort = 41173
 externalPort = 3000
 
+[[ports]]
+localPort = 45773
+externalPort = 3001
+
 [deployment]
 deploymentTarget = "autoscale"
 run = ["gunicorn", "--bind=0.0.0.0:5000", "--reuse-port", "portal_noticias.wsgi:application"]
+build = ["python", "manage.py", "collectstatic", "--noinput"]
