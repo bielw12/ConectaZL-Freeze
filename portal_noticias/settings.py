@@ -190,4 +190,4 @@ REST_FRAMEWORK = {
 }
 
 # X-Frame-Options for embedding
-X_FRAME_OPTIONS = 'ALLOWALL'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
