@@ -124,7 +124,7 @@ git --version
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd conecta-zl
+cd ConectaZL-Freeze
 ```
 
 ### 2. Crie um Ambiente Virtual
